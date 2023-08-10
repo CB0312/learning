@@ -1,0 +1,8 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://dynamic_font/HATTEN.TTF" type="DynamicFontData" id=1]
+
+[resource]
+size = 186
+outline_color = Color( 0.176471, 0.941176, 0.921569, 1 )
+font_data = ExtResource( 1 )

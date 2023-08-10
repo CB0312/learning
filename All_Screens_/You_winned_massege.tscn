@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://themes_for_font/SHOWG_THEME.tres" type="Theme" id=1]
+[ext_resource path="res://Backgrounds/8ad3eed72659c7c3a32c99e025941123.jpg" type="Texture" id=2]
+[ext_resource path="res://Reuseable_Entities/quit.gd" type="Script" id=3]
+[ext_resource path="res://Reuseable_Entities/play_again.gd" type="Script" id=4]
+[ext_resource path="res://All_Screens_/intertface_02_level_01_.gd" type="Script" id=5]
+[ext_resource path="res://Reuseable_Entities/play.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Reuseable_Entities/quit.tscn" type="PackedScene" id=7]
+
+[node name="You_winned_massege" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0, 1, 0.133333, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="controler_for android" type="CanvasLayer" parent="."]
+
+[node name="Android_intertface_02_level_01_" type="Control" parent="controler_for android"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Button_pause" type="Button" parent="controler_for android/Android_intertface_02_level_01_"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -194.0
+margin_bottom = 67.0
+theme = ExtResource( 1 )
+text = "pause"
+
+[node name="paused_overlay" type="ColorRect" parent="controler_for android/Android_intertface_02_level_01_"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0823529, 0.0745098, 0.0745098, 0.235294 )
+
+[node name="Label" type="Label" parent="controler_for android/Android_intertface_02_level_01_/paused_overlay"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -323.0
+margin_right = 323.0
+margin_bottom = 125.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "you win 
+Game-over
+
+
+
+
+thanks for playing"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="controler_for android/Android_intertface_02_level_01_/paused_overlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.0
+margin_top = -92.0
+margin_right = 184.0
+margin_bottom = 96.0
+rect_scale = Vector2( 0.926346, 0.943352 )
+
+[node name="play_Again" type="Button" parent="controler_for android/Android_intertface_02_level_01_/paused_overlay/VBoxContainer" instance=ExtResource( 6 )]
+modulate = Color( 0.329412, 1, 0.101961, 1 )
+margin_right = 351.0
+margin_bottom = 67.0
+theme = ExtResource( 1 )
+text = "Play again"
+icon_align = 1
+script = ExtResource( 4 )
+
+[node name="quit" type="Button" parent="controler_for android/Android_intertface_02_level_01_/paused_overlay/VBoxContainer" instance=ExtResource( 7 )]
+modulate = Color( 0.933333, 0.0901961, 0.0901961, 1 )
+margin_top = 71.0
+margin_right = 351.0
+margin_bottom = 138.0
+theme = ExtResource( 1 )
+text = "Quit"
+icon_align = 1
+script = ExtResource( 3 )
+
+[connection signal="button_up" from="controler_for android/Android_intertface_02_level_01_/Button_pause" to="controler_for android/Android_intertface_02_level_01_" method="_on_Button_pause_button_up"]
+[connection signal="button_up" from="controler_for android/Android_intertface_02_level_01_/paused_overlay/VBoxContainer/play_Again" to="controler_for android/Android_intertface_02_level_01_" method="_on_play_Again_button_up"]
+[connection signal="button_up" from="controler_for android/Android_intertface_02_level_01_/paused_overlay/VBoxContainer/quit" to="controler_for android/Android_intertface_02_level_01_/paused_overlay/VBoxContainer/quit" method="_on_quit_button_up"]

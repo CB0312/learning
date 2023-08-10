@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://themes_for_font/ui_theme_HATTEN.tres" type="Theme" id=1]
+
+[node name="play" type="Button"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -295.0
+margin_top = 243.0
+margin_right = 603.0
+margin_bottom = 700.0
+rect_scale = Vector2( 0.232776, 0.231794 )
+theme = ExtResource( 1 )
+text = "Play"
+icon_align = 1

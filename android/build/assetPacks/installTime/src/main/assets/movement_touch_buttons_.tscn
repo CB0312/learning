@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://characters_sprites/button_Move_.png" type="Texture" id=1]
+
+[node name="player_controlers" type="CanvasLayer"]
+layer = 5
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = -71.0
+margin_right = 71.0
+margin_bottom = -31.0
+
+[node name="move_left_" type="TouchScreenButton" parent="HSplitContainer"]
+position = Vector2( 189, 48 )
+rotation = 3.14159
+scale = Vector2( 1.99998, 1.27866 )
+normal = ExtResource( 1 )
+passby_press = true
+action = "move_left"
+
+[node name="move_right_2" type="TouchScreenButton" parent="HSplitContainer"]
+position = Vector2( 215, -82 )
+scale = Vector2( 2.01917, 1.29509 )
+normal = ExtResource( 1 )
+passby_press = true
+action = "move_right"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -157.0
+margin_top = -25.0
+margin_right = -117.0
+margin_bottom = 15.0
+
+[node name="jump_3" type="TouchScreenButton" parent="CenterContainer"]
+position = Vector2( -121, 0 )
+rotation = 4.71239
+scale = Vector2( 1.28812, 2.35632 )
+normal = ExtResource( 1 )
+passby_press = true
+action = "jump"

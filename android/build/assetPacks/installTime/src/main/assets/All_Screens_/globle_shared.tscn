@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://music/mixkit-boxer-getting-hit-2055.wav" type="AudioStream" id=1]
+[ext_resource path="res://globle_shared.gd" type="Script" id=2]
+
+[node name="globle_shared" type="Node"]
+script = ExtResource( 2 )
+
+[node name="boxer_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="stumping_sound" type="AudioStreamPlayer" parent="."]

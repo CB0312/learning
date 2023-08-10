@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/black-box-league-of-legends-130392.mp3-d881bfb5bb5c0b6cd36db15c64959f80.mp3str"
+
+[deps]
+
+source_file="res://music/black-box-league-of-legends-130392.mp3"
+dest_files=[ "res://.import/black-box-league-of-legends-130392.mp3-d881bfb5bb5c0b6cd36db15c64959f80.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

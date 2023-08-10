@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://All_Screens_/android_intertface_02_level_01_.tscn" type="PackedScene" id=2]
+
+[node name="controler_for android" type="CanvasLayer"]
+
+[node name="Android_intertface_02_level_01_" parent="." instance=ExtResource( 2 )]

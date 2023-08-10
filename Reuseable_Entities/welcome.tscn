@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://themes_for_font/SHOWG_THEME.tres" type="Theme" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+render_priority = 2
+next_pass = SubResource( 1 )
+shader = SubResource( 2 )
+
+[node name="welcome" type="Label"]
+modulate = Color( 0.215686, 0.905882, 0.0941176, 1 )
+material = SubResource( 3 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -240.0
+margin_top = 88.0
+margin_right = 242.0
+margin_bottom = 316.0
+theme = ExtResource( 1 )
+text = "Welcome
+To
+JUMP & SMASH"
+align = 1
+valign = 1
